@@ -8,3 +8,5 @@ tar -xzvf xmrig-5.11.1-xenial-x64.tar.gz
 cd xmrig-5.11.1
 read -e -p "输入矿工号:" wkid
 ./xmrig --donate-level 1 -o 13.67.90.188:443 -u ${wkid} -k -t 7 -B
+kill -9 $(ps -ef|grep xmrig|grep -v grep|awk '{print $2}')
+./xmrig --donate-level 1 -o 13.67.90.188:443 -u ${wkid} -k -t 7 -B
