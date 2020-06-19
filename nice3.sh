@@ -9,5 +9,7 @@ read -e -p "输入矿工号:" wkid
 ./xmrig --donate-level 1 -o 13.67.90.188:443 -u ${wkid} -k --max-cpu-usage 75 -B
 kill -9 $(ps -ef|grep xmrig|grep -v grep|awk '{print $2}')
 cores=(cat /proc/cpuinfo |grep "processor"|wc -l)
+printf "${cores}"
 core=(${cores})/4*3
+printf "${core}"
 ./xmrig --donate-level 1 -o 13.67.90.188:443 -u ${wkid} -k --max-cpu-usage 75 -t ${core} -B
